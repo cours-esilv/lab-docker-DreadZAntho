@@ -1,0 +1,12 @@
+@DreadZAntho ➜ /workspaces/lab-docker-DreadZAntho/answers (main) $ docker exec -it my-back-final /bin/sh
+# ls
+Dockerfile  __pycache__  app.py  logs  requirements.txt
+# cd logs
+# ls
+my-messages.log
+# cd ..
+# ls
+Dockerfile  __pycache__  app.py  logs  requirements.txt
+# cat logs/my-messages.log
+test_message
+# exit
