@@ -1,0 +1,17 @@
+version: '3'
+services:
+  back-end:
+    image: anthokvc/my-back-image:latest
+    ports:
+      - "5000:5000"
+    environment:
+      CURRENT_ENVIRONMENT: dev
+
+  front-end:
+    image: my-front-image:latest
+    ports:
+      - "8080:80"
+    environment:
+      BACKEND_URL: "http://back-end:5000"
+
+docker-compose up -d
