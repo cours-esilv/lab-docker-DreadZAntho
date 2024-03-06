@@ -1,0 +1,9 @@
+cd app/front
+touch Dockerfile
+
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
+EXPOSE 80
+
+docker build -t my-front-image .
+docker run -d -p 8080:80 --name my-front-container my-front-image
