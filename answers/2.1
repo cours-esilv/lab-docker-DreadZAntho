@@ -1,0 +1,14 @@
+cd app
+touch docker-compose.yml
+
+version: '3'
+services:
+  back-end:
+    image: anthokvc/my-back-image:latest 
+    ports:
+      - "5000:5000"
+    environment:
+      - CURRENT_ENVIRONMENT=dev
+
+docker-compose up -d
+docker-compose ps
